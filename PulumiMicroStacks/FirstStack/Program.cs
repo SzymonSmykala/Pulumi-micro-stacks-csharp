@@ -1,12 +1,7 @@
-﻿using Pulumi;
-using Pulumi.AzureNative.Resources;
-using Pulumi.AzureNative.Storage;
-using Pulumi.AzureNative.Storage.Inputs;
-using System.Collections.Generic;
+using System.Threading.Tasks;
+using Pulumi;
 
-return await Pulumi.Deployment.RunAsync(() =>
+class Program
 {
-    // Create an Azure Resource Group
-    var resourceGroup = new ResourceGroup("resourceGroup");
-
-});
+    static Task<int> Main() => Deployment.RunAsync<StackOne>();
+}
