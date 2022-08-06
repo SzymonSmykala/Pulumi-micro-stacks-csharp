@@ -7,7 +7,8 @@ class StackTwo : Stack
 {
     public StackTwo()
     {
-        var stackOne = new StackReference("devone");
+        var config = new Config();
+        var stackOne = new StackReference($"SzymonSmykala/StackOne/devone");
         var resourceGroupName = stackOne.GetOutput("ResourceGroupName");
         
         var storageAccount = new StorageAccount("sa", new StorageAccountArgs
