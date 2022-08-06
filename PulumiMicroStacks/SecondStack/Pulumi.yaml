@@ -1,0 +1,3 @@
+name: SecondStack
+runtime: dotnet
+description: A minimal Azure Native C# Pulumi program
