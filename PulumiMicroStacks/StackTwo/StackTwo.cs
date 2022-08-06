@@ -7,8 +7,11 @@ class StackTwo : Stack
 {
     public StackTwo()
     {
-        var config = new Config();
-        var stackOne = new StackReference($"SzymonSmykala/StackOne/devone");
+        const string orgName = "SzymonSmykala";
+        const string projectName = "StackOne";
+        const string stackName = "devone";
+        
+        var stackOne = new StackReference($"{orgName}/{projectName}/{stackName}");
         var resourceGroupName = stackOne.GetOutput("ResourceGroupName");
         
         var storageAccount = new StorageAccount("sa", new StorageAccountArgs
